@@ -1,0 +1,9 @@
+<div>
+ <h1>Move</h1>
+ {{ move.name }}<br />
+ {{ move.flavor_text }}<br />
+ <div *ngFor="let effect of move.effect_entries">
+  {{ effect.effect }} <br />
+  {{ effect.short_effect }} <br />
+ </div>
+</div>

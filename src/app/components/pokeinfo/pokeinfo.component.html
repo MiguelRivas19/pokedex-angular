@@ -1,0 +1,30 @@
+<div>
+ {{ pokemon.id }} <br />
+ {{ pokemon.name }} <br />
+ {{ pokemon.weight }} <br />
+ {{ pokemon.height }} <br />
+<!-- {{ pokemon.specie }} <br />-->
+ <img src="{{ pokemon.sprite }}"> <br />
+ <div>
+  <app-pokespecie [url]="pokemon.specie"></app-pokespecie>
+ </div>
+<!-- <div *ngFor="let ability of pokemon.abilities">
+  {{ ability }} <br />
+ </div>
+ 
+ <div *ngFor="let move of pokemon.moves">
+  {{ move }} <br />
+ </div>
+ -->
+ <div *ngFor="let ability of pokemon.abilities">
+  <app-pokeability [url]="ability"></app-pokeability>
+ </div>
+
+ <div *ngFor="let move of pokemon.moves">
+  <app-pokemove [url]="move"></app-pokemove>
+ </div>
+
+ <div *ngFor="let type of pokemon.types">
+ {{ type }} <br />
+ </div>
+</div>
