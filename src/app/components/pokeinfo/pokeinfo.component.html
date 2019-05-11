@@ -1,8 +1,8 @@
-<div>
- {{ pokemon.id }} <br />
- {{ pokemon.name }} <br />
- {{ pokemon.weight }} <br />
- {{ pokemon.height }} <br />
+<div *ngIf="name">
+ Id: {{ pokemon.id }} <br />
+ Name: {{ pokemon.name }} <br />
+ Weight: {{ pokemon.weight|kilogram }} <br />
+ Height: {{ pokemon.height|metre }} <br />
 <!-- {{ pokemon.specie }} <br />-->
  <img src="{{ pokemon.sprite }}"> <br />
  <div>

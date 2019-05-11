@@ -12,7 +12,17 @@ export class PokegeneratorService {
 
   constructor() { }
 
-    getPokemon(data: any): Pokemon {
+  getPokemons(data: any) {
+   let p: any = data['pokemon_entries'];
+   let pokemons: Array<string> = [];
+  
+   for(var i = 0; i < p.length; i++){
+    pokemons.push(p[i].pokemon_species.name);
+   }
+   return pokemons;
+  }
+
+  getPokemon(data: any): Pokemon {
    let pokemon: Pokemon;
    pokemon = { 
     id: data.id,

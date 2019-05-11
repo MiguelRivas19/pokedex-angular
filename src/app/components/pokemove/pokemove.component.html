@@ -1,9 +1,14 @@
 <div>
  <h1>Move</h1>
- {{ move.name }}<br />
- {{ move.flavor_text }}<br />
+ <h4> Name: {{ move.name }} </h4>
+ Description:  {{ move.flavor_text }}<br />
  <div *ngFor="let effect of move.effect_entries">
-  {{ effect.effect }} <br />
-  {{ effect.short_effect }} <br />
+  Effect: {{ effect.effect }} <br />
+  <div *ngIf="effect.effect != effect.short_effect">
+   Short effect: {{ effect.short_effect }}
+  </div>
+  <div *ngIf="effect.effect == effect.short_effect">
+   Short effect: No short effect <br />
+  </div>
  </div>
 </div>

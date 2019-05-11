@@ -1,9 +1,14 @@
 <div>
  <h1>Ability</h1>
- {{ ability.name }}<br />
- {{ ability.flavor_text }}<br />
+ <h4>Name: {{ ability.name }}</h4>
+ Description: {{ ability.flavor_text }}<br />
  <div *ngFor="let effect of ability.effect_entries">
-  {{ effect.effect }} <br />
-  {{ effect.short_effect }} <br />
+  Effect: {{ effect.effect }} <br />
+  <div *ngIf="effect.effect != effect.short_effect">
+   Short effect: {{ effect.short_effect }} <br />
+  </div>
+  <div *ngIf="effect.effect == effect.short_effect">
+   Short effect: No short effect <br />
+  </div>
  </div>
 </div>

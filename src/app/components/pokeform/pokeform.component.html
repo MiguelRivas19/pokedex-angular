@@ -1,0 +1,7 @@
+<div>
+ Filter your pokemons : <input [(ngModel)]="pokefilter">
+ <select *ngIf="pokemons" [(ngModel)]="name">
+  <option *ngFor="let pokemon of (pokemons|filter:pokefilter)" [(ngValue)]="pokemon" >{{ pokemon }}</option>
+ </select>
+ <button (click)="go()"> Go! </button>
+</div>
