@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PokeshareService {
   name: string = '';
+  specie_url: string = '';
 
   constructor() { }
 

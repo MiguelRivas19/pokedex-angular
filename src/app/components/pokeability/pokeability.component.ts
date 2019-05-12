@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, DoCheck } from '@angular/core';
 import { Ability } from '../../classes/ability';
 
 import { PokegeneratorService } from '../../services/pokegenerator.service';
@@ -19,7 +19,7 @@ export class PokeabilityComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   this.init();
+    this.init();
   }
 
   init(){
