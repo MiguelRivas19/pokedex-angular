@@ -87,12 +87,15 @@ export class PokegeneratorService {
   }
 
   getMove(data: any): Move{
-   let move: Move = {
-    name: data.name,
-    effect_entries: this.getEffects(data),
-    flavor_text: this.getFlavorText(data)
-   };
-   return move;
+   if (data.machines.length == 0){
+    let move: Move = {
+     name: data.name,
+     effect_entries: this.getEffects(data),
+     flavor_text: this.getFlavorText(data)
+    };
+    return move;
+   }
+   return null;
   }
 
   private getEffects(data: any): Array<Effect> {
